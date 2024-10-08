@@ -1,2 +1,4 @@
 # AgenciaColors
- projeto para a agencia colors
+ projeto landing para a agencia colors
+ Html concluido
+ css em desenvolvimento
