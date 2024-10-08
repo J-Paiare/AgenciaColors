@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family-Merriweather&family-Oswald:wght@600;700&display-swap');
+
+/* * é tudo */
+*, *:after, *:before {
+    box-sizing: border-box;
+    /* scroll-padding-top: 120px ; permite uma distancia quando se clica NAV a* */
+}
+
+html {
+    font-size: 18px; /* (important) Pode ser usado para fazer uma regra prevalecer */
+    scroll-behavior: smooth; /* permite transiçao suave quando se clica Nav a */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+/* para tornar site responsitivo 1° elemento */
+img, iframe, video {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem; /* fazele ser 3x o valor do elemento raiz (html) 3x 18px */
+}
+
+header {
+    background-color:#fff;
+    text-align: center;
+    position: sticky; /* fixa o menu no topo */
+    top: 0;
+    padding-bottom: 0.7rem;
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    padding: .5rem .6rem; /* aumenta a area de clique dos elementos nav a */
+    transition: all .8s; /* permite a transfiçao suave ao posicionar o mouse sobre */
+}
+
+nav a:hover {
+    color: rgb(255, 238, 0);
+    background-color: black;
+}
+
+main, section {
+    height: 73vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+    .conteudo {
+        width: 90%;
+        margin: auto; /* centraliza os 10% que sobram */
+        max-width: 800px; /* limitador para nao esticar muito */
+    }
+
+    .conteudo h1 {
+        text-transform: uppercase;
+        font-family: 'Oswald, sans-serif';
+        font-size: 3rem; /* faz ter 3x o valor do elemento raiz (18px) */
+        margin-bottom: 1rem; /* faz ele ser 1x o valor do elemento raiz */
+
+    }
+
+    .conteudo p {
+        line-height: 2rem; /* espaço entre as linhas do paragrafo */
+    }
+
+    .cta {
+        font-family: 'Oswald, sans-serif';
+        text-decoration: none;
+        font-size: .8rem;
+        font-weight: 600;
+        background-color: rgb(255, 238, 0);
+        padding: 1.15rem 1.8rem;
+        line-height: 5.5rem;
+        color: black;
+        letter-spacing: 3px /* controla o espaçamento das letras */;
+        text-transform: uppercase;
+    }
+
+    /* pseudo classe before */
+    .cta: ::before {
+        content: "+"; /* adiciona o elemento +(via css) */
+        margin-right: 0.8rem;
+    }
+    .verde-agua {
+        color: #fff;
+        background-color: #26ccca;
+    }
+
+    #UX {
+        color: #fff;
+        background-image: url(imagens/h13-background-img-2-min.jpg);
+    }
+
+    #motion {
+        background-image: url(imagens/h13-background-img-3-min.jpg);
+        background-size: cover ; /* ajusta a unagem de fundo ao tamanho do elemento */
+        background-position-x: center; /* ajusta a posiçao da imagem */
+    }
+
+    #brand {
+        background-image: url(imagens/h13-background-img-2-min.jpg);
+        color: #fff;
+    }
+
+    .texto {
+        color: #999;
+    }
+
+    #print {
+        color: #fff;
+        background-image: url(imagens/h13-background-img-5-min.jpg);
+        background-size: cover ; /* ajusta a unagem de fundo ao tamanho do elemento */
+        background-position-x: center; /* ajusta a posiçao da imagem */
+    }
+
+    #produto {
+        background-image: url(imagens/h13-background-img-1-min.jpg);
+        background-size: cover ; /* ajusta a unagem de fundo ao tamanho do elemento */
+        background-position-x: center; /* ajusta a posiçao da imagem */
+    }
+
+    #produto, #motion, #print {
+        background-attachment: fixed; /* cria o efeito paralaxe */
+    }
+
+    .conteudo {
+        width: 50%;
+        max-width: 800px;
+        margin: 0;
+        margin-left: 4rem;
+    }
+
+    /* ________________________________________________________________________---_ */
+
+    /* div whatsApp */
+
+    .fixed {
+        position: fixed;
+        /* relativa ao view (html todo) */
+        width: 65px;
+        height: 65px;
+        font-weight: bolder;
+
+        bottom: 90px;
+        right: 30px;
+    }
+
+
+    .fixed:hover {
+        background-color: green;
+        font-weight: bolder;
+        border-radius: 35px;
+    }
+
+    /* ___________________________________________________________________________ */
+    /* responsitividade */
+
+    /* para telas acima de 768px */
+    @media screen and (min-width: 768px) {
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 10vh;
+        }
+
+        .logo {
+            width: 25%;
+        }
+
+        header nav {
+            width: 70%;
+            max-width: 800px;
+        }
+
+        nav a{
+            font-size: 1.1rem; /* aumenta a fonte quando ela for maio que 780px */
+        }
+
+        .conteudo h1 {
+            font-size: 5rem; /*aumenta a fonte quando for maior que 768px*/
+            margin: -0.6rem;
+        }
+    }
